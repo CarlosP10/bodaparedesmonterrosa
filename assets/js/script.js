@@ -595,7 +595,7 @@
             margin: 30,
             loop: false,
             nav: true,
-            navText: ['<i class="fi ti-angle-left"></i>', '<i class="fi ti-angle-right"></i>'],
+            navText: ['<i class="ti-angle-left" style="color: white;"></i>', '<i class="ti-angle-right" style="color: white;"></i>'],
             dots: false,
             items: 1
         });
