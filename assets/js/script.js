@@ -7,7 +7,7 @@
         let contentFile = 'index.html';
 
         if (path === '/2') {
-            contentFile = 'index2.html';
+            contentFile = '../index2.html';
         }
         console.log('path', path);
         console.log('contentFile', contentFile);
