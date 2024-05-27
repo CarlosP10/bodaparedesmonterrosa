@@ -2,23 +2,6 @@
 
     "use strict";
 
-    function loadContent() {
-        const path = window.location.pathname;
-        let contentFile = 'index.html';
-
-        if (path === '/2') {
-            contentFile = 'index2.html';
-        }
-        console.log('path', path);
-        console.log('contentFile', contentFile);
-        fetch(contentFile)
-            .then(response => response.text())
-            .then(data => document.getElementById('content').innerHTML = data)
-            .catch(err => console.error('Error cargando el contenido:', err));
-    }
-
-    window.onload = loadContent;
-
     /*------------------------------------------
         Nice Select
     -------------------------------------------*/

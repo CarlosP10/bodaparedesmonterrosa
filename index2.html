@@ -28,6 +28,24 @@
 
 <body>
     <div id="content"></div>
+    <script>
+        function loadContent() {
+            const path = window.location.pathname;
+            let contentFile = 'index.html';
+
+            if (path === '/2') {
+                contentFile = 'index2.html';
+            }
+            console.log('path', path);
+            console.log('contentFile', contentFile);
+            fetch(contentFile)
+                .then(response => response.text())
+                .then(data => document.getElementById('content').innerHTML = data)
+                .catch(err => console.error('Error cargando el contenido:', err));
+        }
+
+        window.onload = loadContent;
+    </script>
     <!-- start page-wrapper -->
     <div class="page-wrapper">
         <!-- start preloader -->
@@ -198,10 +216,12 @@
                                     <div class="story-text">
                                         <span class="date">22 May, 2022</span>
                                         <h3>Como nos conocimos</h3>
-                                        <p>Era el dia de la foto de graduación para el periodico, y Jeni pícara no dejaba de verme, 
-                                            luego el dia de la entrega de títulos, me llamaron por mi nombre, ella se lo aprendió,
-                                            me busco en insta, decidí empezar a hablarle al instante. 
-                                            su trabajo y proyección llamó mucho mi atención que decidí visitarla 
+                                        <p>Era el dia de la foto de graduación para el periodico, y Jeni pícara no
+                                            dejaba de verme,
+                                            luego el dia de la entrega de títulos, me llamaron por mi nombre, ella se lo
+                                            aprendió,
+                                            me busco en insta, decidí empezar a hablarle al instante.
+                                            su trabajo y proyección llamó mucho mi atención que decidí visitarla
                                             en uno de sus proyectos.</p>
                                     </div>
                                 </div>
@@ -214,12 +234,14 @@
                                     <div class="story-text right-align-text">
                                         <span class="date">23 Febrero, 2023</span>
                                         <h3>Sushi y postre </h3>
-                                        <p>Nos hicimos novios un 23 de Febrero del 22, 
-                                            yo lo planee todo. Ella venía de la playa con su familia. 
-                                            Luego a desayunar con unas amigas, el plan era almorzar sushi juntos; 
-                                            por lo que antes de entrar, le pregunté al mesero si podía ayudarme con un detalle, 
-                                            necesitaba un postre sorpresa, me dijo que sí, que preguntara por "Jairo" como código, 
-                                            al momento de ordenar la comida. Ese mismo dia le di otros detalles que 
+                                        <p>Nos hicimos novios un 23 de Febrero del 22,
+                                            yo lo planee todo. Ella venía de la playa con su familia.
+                                            Luego a desayunar con unas amigas, el plan era almorzar sushi juntos;
+                                            por lo que antes de entrar, le pregunté al mesero si podía ayudarme con un
+                                            detalle,
+                                            necesitaba un postre sorpresa, me dijo que sí, que preguntara por "Jairo"
+                                            como código,
+                                            al momento de ordenar la comida. Ese mismo dia le di otros detalles que
                                             hicieron aún más especial la fecha.
                                         </p>
                                     </div>
@@ -255,14 +277,16 @@
                                     <div class="story-text">
                                         <span class="date"> 23 Sep, 2023</span>
                                         <h3>She said yes!</h3>
-                                        <p>Fue un 23 de septiembre, era un dia normal, 
-                                            habíamos planeado ir por café esa tarde, 
-                                            como una cita cotidiana, no sospeche nada, 
-                                            montaron todo de manera muy discreta con mi hermana y su mamá, 
-                                            cuando llegamos, había un recorrido guiado con flores y fotos, 
-                                            además una vista y un clima que parecía preparado exclusivamente para nosotros. 
-                                            Su familia estuvo presente lo que lo hizo aún más lindo, 
-                                            Incluso había un fotógrafo que capturó uno de los momentos más especiales de mi vida..</p>
+                                        <p>Fue un 23 de septiembre, era un dia normal,
+                                            habíamos planeado ir por café esa tarde,
+                                            como una cita cotidiana, no sospeche nada,
+                                            montaron todo de manera muy discreta con mi hermana y su mamá,
+                                            cuando llegamos, había un recorrido guiado con flores y fotos,
+                                            además una vista y un clima que parecía preparado exclusivamente para
+                                            nosotros.
+                                            Su familia estuvo presente lo que lo hizo aún más lindo,
+                                            Incluso había un fotógrafo que capturó uno de los momentos más especiales de
+                                            mi vida..</p>
                                     </div>
                                 </div>
                             </div>
