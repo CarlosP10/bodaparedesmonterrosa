@@ -612,11 +612,14 @@
             mouseDrag: false,
             smartSpeed: 1200,
             margin: 30,
-            loop: false,
+            loop: true,
             nav: true,
             navText: ['<i class="ti-angle-left" style="color: white;"></i>', '<i class="ti-angle-right" style="color: white;"></i>'],
             dots: false,
-            items: 1
+            items: 1,
+            autoplay: true,
+            autoplayTimeout: 8000,
+            autoplayHoverPause: true
         });
     }
 
