@@ -2,6 +2,25 @@
 
     "use strict";
 
+    document.addEventListener('DOMContentLoaded', function () {
+        const path = window.location.pathname;
+        const container = document.getElementById('cuposContainer');
+        const cuposText = document.getElementById('cuposText');
+
+        if (path === '/') {
+            container.style.display = 'none'; // Hide container if the path is root
+        } else {
+            container.style.display = 'block'; // Show container for other paths
+
+            const numCupos = parseInt(path.substring(1)); // Extract the number of spaces from the path
+            if (!isNaN(numCupos)) {
+                cuposText.innerText = `Hemos reservado ${numCupos} espacio${numCupos > 1 ? 's' : ''} para usted`;
+            } else {
+                cuposText.innerText = 'Hemos reservado 2 espacios para usted'; // Default text if path is invalid
+            }
+        }
+    });
+
     /*------------------------------------------
         Nice Select
     -------------------------------------------*/
