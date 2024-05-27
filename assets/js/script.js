@@ -3,20 +3,20 @@
     "use strict";
 
     document.addEventListener('DOMContentLoaded', function () {
-        const path = window.location.pathname;
+        const urlParams = new URLSearchParams(window.location.search);
         const container = document.getElementById('cuposContainer');
         const cuposText = document.getElementById('cuposText');
 
-        if (path === '/') {
-            container.style.display = 'none'; // Hide container if the path is root
+        if (!urlParams.has('cupos')) {
+            container.style.display = 'none'; // Hide container if there are no cupos parameter
         } else {
-            container.style.display = 'block'; // Show container for other paths
+            container.style.display = 'block'; // Show container if cupos parameter exists
 
-            const numCupos = parseInt(path.substring(1)); // Extract the number of spaces from the path
+            const numCupos = parseInt(urlParams.get('cupos')); // Get the value of cupos parameter
             if (!isNaN(numCupos)) {
                 cuposText.innerText = `Hemos reservado ${numCupos} espacio${numCupos > 1 ? 's' : ''} para usted`;
             } else {
-                cuposText.innerText = 'Hemos reservado 2 espacios para usted'; // Default text if path is invalid
+                cuposText.innerText = 'Hemos reservado 2 espacios para usted'; // Default text if parameter is invalid
             }
         }
     });
